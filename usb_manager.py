@@ -148,23 +148,6 @@ def enable_device(device_id):
     else:
         print(f"[-] 장치를 활성화하지 못했습니다. (이미 활성화되어 있거나 찾을 수 없음)\n")
 
-def restore_all_blocked():
-    """프로그램 종료 시 이번 세션에서 차단한 모든 장치를 복원합니다."""
-    with blocked_devices_lock:
-        devices_to_restore = set(blocked_devices)
-    
-    if not devices_to_restore:
-        return
-    
-    print(f"\n[*] 종료 전 차단된 {len(devices_to_restore)}개 장치를 복원 중...")
-    for device_id in devices_to_restore:
-        enabled_count = wmi_enable_device(device_id)
-        if enabled_count > 0:
-            print(f" -> [복원 완료] {device_id}")
-        else:
-            print(f" -> [복원 실패] {device_id} (장치 관리자에서 직접 활성화하세요)")
-    print("[+] 종료 전 장치 복원 완료.")
-
 def recover_stuck_devices():
     """시작 시 이전 실행에서 비활성화된 채 남아있는 모든 관련 장치를 자동 복구합니다."""
     print("[*] 이전에 차단된 USB 관련 장치 복구 확인 중...")
@@ -209,16 +192,13 @@ def prompt_worker():
             logging.error(f"Prompt worker error: {e}")
 
 def ctrl_handler(ctrl_type):
-    print("\n\n[!] Ctrl+C 감지 - 차단된 장치를 복원하고 종료합니다...")
-    restore_all_blocked()
+    print("\n\n[!] Ctrl+C 감지 - 모니터링을 종료합니다...")
     os._exit(0)
     return True
 
 def monitor_usb_events():
     # Ctrl+C 핸들러 등록
     win32api.SetConsoleCtrlHandler(ctrl_handler, True)
-    # 정상 종료 시에도 장치 복원 (atexit)
-    atexit.register(restore_all_blocked)
 
     pythoncom.CoInitialize()
     c = wmi.WMI()
