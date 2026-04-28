@@ -8,7 +8,7 @@
 - **🚫 Automated Blocking**: Instantly disables unauthorized USB devices at the system level using `pnputil` and native Windows APIs.
 - **📑 Whitelist Management**: Maintain a persistent `usb_whitelist.json` file to allow trusted devices based on their unique serial numbers.
 - **🛡️ AutoRun Protection**: Automatically disables Windows AutoRun/AutoPlay system-wide to prevent the execution of malicious `autorun.inf` files.
-- **🔄 Smart Recovery**: Automatically detects and recovers devices that were left in a disabled state from previous sessions.
+- **🔄 Smart Recovery**: Automatically detects and recovers devices that were left in a disabled state from previous sessions. (비활성화된 USB 장치는 노트북에 꽂은 상태로 프로그램을 다시 실행하면 정상적으로 복구됩니다.)
 - **💻 Admin-Aware**: Automatically requests elevation to Administrator privileges if needed.
 
 ## 🛠️ Installation
