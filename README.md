@@ -46,7 +46,7 @@ pip install wmi pywin32
    - Example `usb_whitelist.json`:
      ```json
      [
-         "123456789"
+         "1234567890123456"
      ]
      ```
 
