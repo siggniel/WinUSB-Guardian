@@ -244,10 +244,8 @@ def monitor_usb_events():
                 serial = device_id.split("\\")[-1].split("&")[0]
                 
                 if any(allowed_serial in serial for allowed_serial in whitelist):
-                    print(f" -> [허용됨] 화이트리스트에 등록된 신뢰할 수 있는 장치입니다. (안전 활성화 진행)")
+                    print(f" -> [허용됨] 화이트리스트에 등록된 신뢰할 수 있는 장치입니다.")
                     logging.info(f"Device allowed by whitelist: {device_id}")
-                    # 이전에 차단되어 에러 상태로 남아있을 수 있으므로 강제 활성화 루틴을 거침
-                    enable_device(device_id)
                     continue
                 
                 # OS가 장치를 완전히 인식하고 드라이버 초기화를 마칠 시간을 잠시 부여 (행 걸림 방지)
