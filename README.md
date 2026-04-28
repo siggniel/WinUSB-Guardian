@@ -63,4 +63,4 @@ This tool is designed to enhance security, but physical security is also paramou
 
 ## 📄 License
 
-MIT License. See `LICENSE` for details.
+Apache License 2.0. See `LICENSE` for details.
