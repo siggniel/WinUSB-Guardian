@@ -31,7 +31,7 @@ pip install wmi pywin32
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/WinUSB-Guardian.git
+   git clone https://github.com/siggniel/WinUSB-Guardian.git
    cd WinUSB-Guardian
    ```
 
@@ -65,7 +65,10 @@ This tool is designed to enhance security, but physical security is also paramou
 
 If you find this project helpful and want to support its continued development, consider making a donation. Your support is greatly appreciated!
 
-- **Bitcoin (BTC)**: `bc1q2vu72s82cr97vw3g7gf6v5lkh83wddx9fry3g3`
+<div align="center">
+  <img src="images/donation_qr.png" alt="Bitcoin Donation QR Code" width="200" />
+  <p><strong>Bitcoin (BTC)</strong><br><code>bc1q2vu72s82cr97vw3g7gf6v5lkh83wddx9fry3g3</code></p>
+</div>
 
 ## 📄 License
 
