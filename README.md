@@ -46,7 +46,7 @@ pip install wmi pywin32
    - Example `usb_whitelist.json`:
      ```json
      [
-         "0358923100002084"
+         "123456789"
      ]
      ```
 
@@ -60,6 +60,12 @@ pip install wmi pywin32
 ## ⚠️ Security Notice
 
 This tool is designed to enhance security, but physical security is also paramount. Ensure your laptop is configured to **Lock on Lid Close** and requires a password on wake-up to mitigate HID-based (keyboard emulation) attacks.
+
+## ☕ Support & Donation
+
+If you find this project helpful and want to support its continued development, consider making a donation. Your support is greatly appreciated!
+
+- **Bitcoin (BTC)**: `bc1q2vu72s82cr97vw3g7gf6v5lkh83wddx9fry3g3`
 
 ## 📄 License
 
