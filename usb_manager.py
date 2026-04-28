@@ -158,8 +158,8 @@ def restore_all_blocked():
     
     print(f"\n[*] 종료 전 차단된 {len(devices_to_restore)}개 장치를 복원 중...")
     for device_id in devices_to_restore:
-        enabled, _ = wmi_enable_device(device_id)
-        if enabled:
+        enabled_count = wmi_enable_device(device_id)
+        if enabled_count > 0:
             print(f" -> [복원 완료] {device_id}")
         else:
             print(f" -> [복원 실패] {device_id} (장치 관리자에서 직접 활성화하세요)")
