@@ -61,14 +61,6 @@ pip install wmi pywin32
 
 This tool is designed to enhance security, but physical security is also paramount. Ensure your laptop is configured to **Lock on Lid Close** and requires a password on wake-up to mitigate HID-based (keyboard emulation) attacks.
 
-## ☕ Support & Donation
-
-If you find this project helpful and want to support its continued development, consider making a donation. Your support is greatly appreciated!
-
-<div align="center">
-  <img src="images/donation_qr.png" alt="Bitcoin Donation QR Code" width="200" />
-  <p><strong>Bitcoin (BTC)</strong><br><code>bc1q2vu72s82cr97vw3g7gf6v5lkh83wddx9fry3g3</code></p>
-</div>
 
 ## 📄 License
 
